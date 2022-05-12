@@ -1,8 +1,8 @@
 package com.test.project;
 
-import com.test.hib.controller.*;
-import com.test.hib.model.*;
-import org.hibernate.query.sql.internal.SQLQueryParser;
+import com.test.hib.controller.CreatingUser;
+import com.test.hib.model.User;
+import com.test.hib.model.UserDetails;
 
 import java.util.Scanner;
 
@@ -10,12 +10,13 @@ public class Main {
     public static void main(String[] args) {
 
         int choice = 0;
-        while (choice != 7) {
+        while (choice != 9) {
             System.out.println("""
                     1. Add new user
                     2. Delete user
                     3. Update user
                     4. Show all users
+                    9. Exit
                     """);
             Scanner scanner = new Scanner(System.in);
             choice = scanner.nextInt();
@@ -52,8 +53,9 @@ public class Main {
                 case 3 -> {// Update user
                 }
                 case 4 -> {// Show all users
-
-                    ;
+                }
+                case 9 -> {// Exit
+                    System.out.println("Bye!");
                 }
 
             }
