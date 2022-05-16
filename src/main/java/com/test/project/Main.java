@@ -1,8 +1,8 @@
 package com.test.project;
 
-import com.test.hib.controller.CreatingUser;
-import com.test.hib.model.User;
-import com.test.hib.model.UserDetails;
+import com.test.hib.controller.*;
+import com.test.hib.model.*;
+
 
 import java.util.Scanner;
 
@@ -37,8 +37,8 @@ public class Main {
                     int age = scanner.nextInt();
                     System.out.println("Enter salary:");
                     double salary = scanner.nextDouble();
-                    System.out.println("Enter State (two letter abbreviation):");
                     scanner.nextLine();
+                    System.out.println("Enter State (two letter abbreviation):");
                     String state = scanner.nextLine();
                     UserDetails userDetails = new UserDetails(email, age, salary, state);
                     // try to create user
@@ -53,6 +53,7 @@ public class Main {
                 case 3 -> {// Update user
                 }
                 case 4 -> {// Show all users
+                    new FindingUser();
                 }
                 case 9 -> {// Exit
                     System.out.println("Bye!");
